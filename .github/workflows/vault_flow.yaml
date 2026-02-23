@@ -22,7 +22,7 @@ jobs:
       # Login to Vault using JWT (OIDC)
       # -------------------------------
       - name: Read secrets from Vault
-        #id: vault
+        id: vault
         uses: hashicorp/vault-action@v2
         with:
           method: jwt
