@@ -33,14 +33,6 @@ jobs:
           secrets: |
             secret/data/production/db username | DB_USER ;
             secret/data/production/db password | DB_PASS
-          shell: bash
-          run: |
-            echo "---- DB_USER ----"
-            echo "$DB_USER"
-            echo "---- DB_PASS ----"
-            echo "$DB_PASS" 
-
-
 
       # -----------------------------------------
       # SAFE verification (no secret values shown)
