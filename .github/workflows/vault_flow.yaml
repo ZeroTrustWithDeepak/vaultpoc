@@ -56,3 +56,13 @@ jobs:
               echo "✅ $v is SET (length=${#v})"
             fi
           done
+
+      
+      - name: Debug fingerprint (safe)
+        shell: bash
+        run: |
+          echo "DB_USER_SHA256=$(printf '%s' "$DB_USER" | sha256sum | awk '{print $1}')"
+          echo "DB_PASS_SHA256=$(printf '%s' "$DB_PASS" | sha256sum | awk '{print $1}')"
+          echo "$DB_PASS"
+          echo "$DB_PASS"
+
